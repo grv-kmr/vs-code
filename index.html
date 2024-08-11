@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+
+<style>
+    * {
+        margin: 0%;
+    }
+
+    body {
+        background-color: #0e0e0e;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        ;
+    }
+
+    .navigation {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(10, max-content);
+        grid-template-rows: 58px;
+
+
+
+    }
+
+    .nav-con {
+        padding: 18px;
+        color: #AAAAAA;
+    }
+
+    .nav-con:hover {
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+
+    .vsc {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 20px;
+
+    }
+
+    .tag {
+        display: grid;
+        grid-template-rows: max-content max-content;
+        text-align: center;
+    }
+
+    .tagline {
+        text-align: center;
+        font-weight: 600;
+        font-size: 40px;
+        padding-top: 45px;
+    }
+
+    .os {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 75px;
+        text-align: center;
+
+    }
+
+    .os_content {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+
+    }
+
+    .os_btn {
+        font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell," Helvetica Neue",sans-serif";
+        font-size: 14px;
+        background-color: #0078d4;
+        border-radius: 4px;
+        border-style: none;
+        color: #FFFFFF;
+        padding: 12px 24px;
+        margin-top: 4%;
+    }
+
+    .os_btn:hover {
+        cursor: pointer;
+        background-color: #005ba4;
+    }
+
+    .btn_con {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .light {
+        border-style: none;
+        background-color: #0e0e0e;
+        height: 32px;
+        width: 32px;
+
+    }
+
+    .light:hover {
+        cursor: pointer;
+        background-color: #272727;
+        border-radius: 4px;
+    }
+
+    .search {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: max-content max-content;
+        gap: 8px;
+        border: #272727 solid 1px;
+        border-radius: 4px;
+
+    }
+
+    .btn_search {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        gap: 8px;
+    }
+
+    .srch_txt {
+        background-color: #0e0e0e;
+    }
+
+    .srch_txt::after {
+        border: #0078d4 solid 1px;
+        border-radius: 4px;
+    }
+
+    input {
+        border: 0;
+        outline: 0;
+    }
+
+    input:focus {
+        outline: none !important;
+    }
+
+    .lnx_con {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: max-content;
+        gap: 3px;
+    }
+
+    .win_types {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: repeat(4, max-content);
+    }
+
+    .sml_btn {
+        background-color: #0078d4;
+        color: #FFFFFF;
+        border-style: none;
+        border-radius: 4px;
+        margin-left: 1px;
+        margin-right: 1px;
+        text-decoration: underline;
+        font-size: smaller;
+        padding: 2px;
+    }
+
+    .sml_btn:hover {
+        background-color: #005ba4;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>
+<html>
+
+<head>
+    <title>Download Visual Studio Code</title>
+    <link rel="icon" href="vs.png">
+</head>
+
+<body>
+    <div class="navigation">
+        <div style='padding: 18px; margin-top: -4px; cursor: pointer;'>
+            <img style="float: left; margin-right: 5px;" src="vs.png" height="24px" width="24px">
+            <b style="text-wrap:nowrap; font-size: 20px;">Visual Studio Code</b>
+        </div>
+        <div class="nav-con">Docs</div>
+        <div class="nav-con">Updates</div>
+        <div class="nav-con">Blog</div>
+        <div class="nav-con">API</div>
+        <div class="nav-con">Extensions</div>
+        <div class="nav-con">FAQ</div>
+        <div class="nav-con">Learn</div>
+        <div class="nav-con btn_search" style="padding-top: 10px;">
+            <button class="light"><img src="theme-light.svg" height="20px"></button>
+            <div class="search srch_txt">
+                <div><img style="padding-bottom: 5px; padding-top: 8px; padding-left: 8px;" src="search-dark.svg"></div>
+                <div>
+                    <input style="background-color:#0e0e0e;color: #929aaa; font-size: 14px; border-style: none; text-decoration: none; height: 30px;padding-top: 5px;
+                padding-right: 12px;
+                padding-bottom: 5px;" type="search" placeholder="Search Docs">
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 6px;">
+            <button class="os_btn"
+                style="line-height: 50%; font-size: 16px; font-weight: 600; margin-right: 25px;">Download</button>
+        </div>
+
+    </div>
+
+    <div class='tag'>
+        <h1 class='tagline'>Download Visual Studio Code</h1>
+        <h3 style=" color:#9ba3b4; text-wrap:balance; font-weight: 400; margin-top: 12px; font-size: 21px;">Free and
+            built on open source. Integrated Git, debugging and extensions.</h3>
+    </div>
+
+    <div class='os'>
+        <div class='os_content'>
+            <img src="./win.png" height="100px" width="100px">
+            <button class='os_btn'>
+                <div class='btn_con'>
+                    <div>
+                        <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                            alt="download--v1" />
+                        <b style="font-size: large;">Windows</b><br>
+                    </div>
+                    <div>
+                        <span style="font-size: small;"><b>Windows 10, 11</b></span>
+                    </div>
+                </div>
+            </button>
+
+            <div class='win_types'>
+                <div
+                    style=" color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                    User Installer</div>
+                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+                <div
+                    style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                    System <br>Installer</div>
+                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+                <div
+                    style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                    .zip</div>
+                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+                <div
+                    style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                    CLI</div>
+                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div>
+            <div class='os_content'>
+                <img src="./linux-logo.png" height="100px">
+                <div class="lnx_con">
+                    <div>
+                        <button class='os_btn'>
+                            <div class='btn_con'>
+                                <div>
+                                    <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                                        alt="download--v1" />
+                                    <b style="font-size: large;">.deb</b><br>
+                                </div>
+                                <div>
+                                    <span style="font-size: small;"><b>Debian, Ubuntu</b></span>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+                    <div>
+                        <button class='os_btn'>
+                            <div class='btn_con'>
+                                <div>
+                                    <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                                        alt="download--v1" />
+                                    <b style="font-size: large;">.rpm</b><br>
+                                </div>
+                                <div>
+                                    <span style="font-size: small;"><b>Red Hat, Fedora, SUSE</b></span>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div>
+            <div class='os_content'>
+                <img src="apple-logo-inverted.svg" height="100px">
+                <button class='os_btn'>
+                    <div class='btn_con'>
+                        <div>
+                            <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                                alt="download--v1" />
+                            <b style="font-size: large;">Mac</b><br>
+                        </div>
+                        <div>
+                            <span style="font-size: small;"><b>macOS 10.15+</b></span>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
