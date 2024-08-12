@@ -58,10 +58,11 @@
 
     .os {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, max-content);
         margin-left: 15%;
-        margin-right: 15%;
-        margin-top: 75px;
+        margin-right: 17%;
+        margin-top: 78px;
         text-align: center;
 
     }
@@ -82,7 +83,7 @@
         border-style: none;
         color: #FFFFFF;
         padding: 12px 24px;
-        margin-top: 4%;
+        height: max-content;
     }
 
     .os_btn:hover {
@@ -132,7 +133,7 @@
         background-color: #0e0e0e;
     }
 
-    .srch_txt::after {
+    .srch_txt:focus-within {
         border: #0078d4 solid 1px;
         border-radius: 4px;
     }
@@ -151,7 +152,6 @@
         grid-template-columns: repeat(2, max-content);
         grid-template-rows: max-content;
         gap: 3px;
-        margin-top: -35px;
     }
 
     .win_types {
@@ -160,7 +160,8 @@
         grid-template-rows: repeat(4, max-content);
         justify-content: center;
         align-items: center;
-        margin-top: -40px;
+        gap: 6px;
+        margin-top: 8px;
     }
 
     .lnx_type {
@@ -169,7 +170,8 @@
         grid-template-rows: repeat(5, max-content);
         justify-content: center;
         align-items: center;
-        margin-top: -20px;
+        gap: 3px;
+        margin-top: 8px;
     }
 
 
@@ -181,7 +183,7 @@
         margin-left: 1px;
         margin-right: 1px;
         text-decoration: underline;
-        font-size: smaller;
+        font-size: 12px;
         padding: 2px;
     }
 
@@ -189,6 +191,49 @@
         background-color: #005ba4;
         cursor: pointer;
         text-decoration: none;
+    }
+
+    .TnC {
+        color: #4daafc;
+        text-decoration: underline;
+    }
+
+    .TnC:hover {
+        color: #8fc3fe;
+    }
+
+    .TnC_2 {
+        color: #4daafc;
+        
+    }
+
+    .TnC_2:hover {
+        color: #8fc3fe;
+        text-decoration: underline;
+    }
+
+    .feature{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: max-content;
+        text-align: center;
+        margin-top: 8%;
+        margin-left: 20%;
+        gap: 30%;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        margin-top: 30px;
+    }
+    .footer_end{
+        color:#AAAAAA;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .footer_end:hover{
+        cursor: pointer;
     }
 </style>
 <html>
@@ -211,7 +256,7 @@
         <div class="nav-con">Extensions</div>
         <div class="nav-con">FAQ</div>
         <div class="nav-con">Learn</div>
-        <div class="nav-con btn_search" style="padding-top: 10px;">
+        <div class="nav-con btn_search" style="padding-top: 10px; margin-left: 50px;">
             <button class="light"><img src="theme-light.svg" height="20px"></button>
             <div class="search srch_txt">
                 <div><img style="padding-bottom: 5px; padding-top: 8px; padding-left: 8px;" src="search-dark.svg"></div>
@@ -222,7 +267,7 @@
                 </div>
             </div>
         </div>
-        <div style="margin-top: 6px;">
+        <div style="margin-top: 11px;">
             <button class="os_btn"
                 style="line-height: 50%; font-size: 16px; font-weight: 600; margin-right: 25px;">Download</button>
         </div>
@@ -235,10 +280,16 @@
             built on open source. Integrated Git, debugging and extensions.</h3>
     </div>
 
-    <div class='os'>
-        <div class='os_content'>
-            <img src="./win.png" height="100px" width="100px">
-            <button class='os_btn' style="margin-top: -25px">
+
+
+
+
+    <div class="os">
+        <div><img src="./win.png" height="100px" width="100px" style="margin-left: 10px;"></div>
+        <div><img src="./linux-logo.png" height="100px" style="margin-right: 15px;"></div>
+        <div><img src="./apple-logo-inverted.svg" height="100px"></div>
+
+        <div><button class='os_btn' style="margin-top: 10px;">
                 <div class='btn_con'>
                     <div>
                         <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
@@ -250,134 +301,145 @@
                     </div>
                 </div>
             </button>
-
-            <div class='win_types'>
-                <div
-                    style=" color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                    User Installer</div>
-                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
-
-                <div
-                    style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                    System <br>Installer</div>
-                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
-
-                <div
-                    style=" margin-top: 10px; margin-bottom: 10px; color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                    .zip </div>
-                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
-
-                <div
-                    style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                    CLI</div>
-                <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
-
-            </div>
         </div>
-
-
-
-
-
-
-
-        <div>
-            <div class='os_content'>
-                <img src="./linux-logo.png" height="100px">
-                <div class="lnx_con">
+        <div style="display: grid; grid-template-columns: repeat(2,max-content); gap:3px;">
+            <button class='os_btn' style="margin-top: 10px;">
+                <div class='btn_con'>
                     <div>
-                        <button class='os_btn'>
-                            <div class='btn_con'>
-                                <div>
-                                    <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
-                                        alt="download--v1" />
-                                    <b style="font-size: large;">.deb</b><br>
-                                </div>
-                                <div>
-                                    <span style="font-size: small;"><b>Debian, Ubuntu</b></span>
-                                </div>
-                            </div>
-                        </button>
-
+                        <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                            alt="download--v1" />
+                        <b style="font-size: large;">.deb</b><br>
                     </div>
                     <div>
-                        <button class='os_btn'>
-                            <div class='btn_con'>
-                                <div>
-                                    <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
-                                        alt="download--v1" />
-                                    <b style="font-size: large;">.rpm</b><br>
-                                </div>
-                                <div>
-                                    <span style="font-size: small;"><b>Red Hat, Fedora, SUSE</b></span>
-                                </div>
-                            </div>
-                        </button>
+                        <span style="font-size: small;"><b>Debian, Ubuntu</b></span>
                     </div>
                 </div>
-                <div class='lnx_type'>
-                    <div
-                        style=" color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                        .deb</div>
-                    <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
-                    <div><button class='sml_btn'>Arm64</button></div>
-
-                    <div
-                        style="margin-top: 6px; margin-bottom: 6px;color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                        .rpm</div>
-                    <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
-                    <div><button class='sml_btn'>Arm64</button></div>
-                    <div
-                        style="margin-top: 6px; margin-bottom: 6px;margin-top: 10px; margin-bottom: 10px;color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                        .tar.gz</div>
-                    <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
-                    <div><button class='sml_btn'>Arm64</button></div>
-                    <div
-                        style="margin-top: 6px; margin-bottom: 6px;color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                        Snap</div>
-                    <div><button class='sml_btn'>Snap Store</button></div>
-                    <div></div>
-                    <div
-                        style="margin-top: 6px;color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
-                        CLI</div>
-                    <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
-                    <div><button class='sml_btn'>Arm64</button></div>
-
-
+            </button>
+            <button class='os_btn' style="margin-top: 10px;">
+                <div class='btn_con'>
+                    <div>
+                        <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                            alt="download--v1" />
+                        <b style="font-size: large;">.rpm</b><br>
+                    </div>
+                    <div>
+                        <span style="font-size: small;"><b>Red Hat, Fedora, SUSE</b></span>
+                    </div>
                 </div>
-            </div>
+            </button>
+        </div>
+        <div><button class='os_btn' style="margin-top: 10px;">
+                <div class='btn_con'>
+                    <div>
+                        <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
+                            alt="download--v1" />
+                        <b style="font-size: large;">Mac</b><br>
+                    </div>
+                    <div>
+                        <span style="font-size: small;"><b>macOS 10.5+</b></span>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class='win_types'>
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                User Installer</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                System <br>Installer</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                .zip </div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
+
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                CLI</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm64</button></div>
 
         </div>
 
 
+        <div class='lnx_type'>
+            <div
+                style=" color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                .deb</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
+            <div><button class='sml_btn'>Arm64</button></div>
+
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                .rpm</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
+            <div><button class='sml_btn'>Arm64</button></div>
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                .tar.gz</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
+            <div><button class='sml_btn'>Arm64</button></div>
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                Snap</div>
+            <div><button class='sml_btn'>Snap Store</button></div>
+            <div></div>
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                CLI</div>
+            <div><button class='sml_btn'>x64</button><button class='sml_btn'>Arm32</button></div>
+            <div><button class='sml_btn'>Arm64</button></div>
 
 
-
-
-
-
-        <div>
-            <div class='os_content'>
-                <img src="apple-logo-inverted.svg" height="100px">
-                <button class='os_btn'>
-                    <div class='btn_con'>
-                        <div>
-                            <img style="margin-right: 10px;" width="18px" height="18px" src="download.svg"
-                                alt="download--v1" />
-                            <b style="font-size: large;">Mac</b><br>
-                        </div>
-                        <div>
-                            <span style="font-size: small;"><b>macOS 10.15+</b></span>
-                        </div>
-                    </div>
-                </button>
-                
-            </div>
-            
         </div>
-        
+        <div class='lnx_type'>
+            <div
+                style=" color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                .zip</div>
+            <div><button class='sml_btn'>Intel chip</button><button class='sml_btn'>Apple slicon</button></div>
+            <div><button class='sml_btn'>Universal</button></div>
+            <div
+                style="color: #9ba3b4; font-weight: 600; font-size: 15px; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;">
+                CLI</div>
+            <div><button class='sml_btn'>Intel chip</button><button class='sml_btn'>Apple silicon</button></div>
 
+
+        </div>
     </div>
+    <div style="height: 200px; text-align: center; margin-top: 6%; font-size:14px; color: #AAAAAA;">By downloading and
+        using Visual Studio Code, you agree to the <span class='TnC'>license terms</span> and <span class='TnC'>privacy
+            statement</span>.<div></div>
+
+        <div class="feature">
+            <div>
+                <span style = "font-size: 20px; font-weight: 600;">Want new features sooner?</span><br><br>
+                <span style = "font-size: 18px;">Get the <span class = "TnC">Insiders build</span> instead.</span>
+            </div>
+            <div>
+
+                <span style = "font-size: 20px; font-weight: 600;">Use <span class = "TnC">vscode.dev</span> for quick<br>edits online!</span><br><br>
+                <span style = "font-size: 18px;">GitHub, Azure Repos, and local<br> files.</span>
+            </div>
+        </div>
+
+        <div style="margin-top: 4%; gap: 12px; display: grid; grid-template-columns: max-content; grid-template-rows:repeat(2,max-content); justify-content: center;">
+            <div class = 'TnC'>Get previous versions</div>
+            <div class = 'TnC_2'>See SHA-256 Hashes</div>
+        </div>
+
+
+        
+        <div class = "footer">
+            <div><img style="margin-left: -30%; margin-right: 25px;" src = "x-icon.svg" width="19px"><img style="margin-right: 25px;"src = "github-icon.svg" width="24px">
+                <img src = "youtube-icon.svg" width="24px"></div>
+                <div><img style="margin-left: 45%;" src = "microsoft.svg" width=24px></div>
+        </div>
+        <div class = "footer_end">
+            <span style = "margin-left: -53%; margin-right: 20px;">Support</span> <span style = "margin-right: 20px;"> Privacy</span> <span style = "margin-right: 20px;"> Terms of Use</span> <span style = "margin-right: 20px;"> License</span> 
+        </div><br><br><br><br><br><br><br>
 </body>
 
 </html>
